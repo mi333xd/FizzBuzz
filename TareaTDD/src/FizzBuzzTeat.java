@@ -26,4 +26,21 @@ public class FizzBuzzTeat {
     public void testSeis(){
         assertEquals("Fizz", FizzBuzz.getFizzBuzz((6)));
     }
+    @Test
+    public void testSiete(){
+        assertEquals("7", FizzBuzz.getFizzBuzz(7));
+    }
+    @Test
+    public void testOcho(){
+        assertEquals("8", FizzBuzz.getFizzBuzz(8));
+    }
+    @Test
+    public void testNueve(){
+        assertEquals("Fizz", FizzBuzz.getFizzBuzz(9));
+    }
+    @Test
+    public void testDiez(){
+        assertEquals("Buzz", FizzBuzz.getFizzBuzz(10));
+    }
+
 }
