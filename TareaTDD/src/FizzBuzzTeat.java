@@ -42,5 +42,24 @@ public class FizzBuzzTeat {
     public void testDiez(){
         assertEquals("Buzz", FizzBuzz.getFizzBuzz(10));
     }
-
+    @Test
+    public void testOnce(){
+        assertEquals("11", FizzBuzz.getFizzBuzz(11));
+    }
+    @Test
+    public void testDoce(){
+        assertEquals("Fizz", FizzBuzz.getFizzBuzz(12));
+    }
+    @Test
+    public void testTrece(){
+        assertEquals("13", FizzBuzz.getFizzBuzz(13));
+    }
+    @Test
+    public void testCatorce(){
+        assertEquals("14", FizzBuzz.getFizzBuzz(14));
+    }
+    @Test
+    public void testQuince(){
+        assertEquals("FizzBuzz", FizzBuzz.getFizzBuzz(15));
+    }
 }
