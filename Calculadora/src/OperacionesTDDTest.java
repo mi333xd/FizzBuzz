@@ -20,5 +20,9 @@ public class OperacionesTDDTest {
     public void testSuma3Numeroshazl(){
         assertEquals(4,OperacionesTDD.suma("1,1,2"));
     }
-
+    @Test
+    public void testSumaSeparadorSinNumero() {
+        int resultado = OperacionesTDD.suma("1,2,");
+        assertEquals(-1, resultado);
+    }
 }
