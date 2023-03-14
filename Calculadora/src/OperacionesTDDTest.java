@@ -4,14 +4,21 @@ import static org.junit.jupiter.api.Assertions.*;
 public class OperacionesTDDTest {
     @Test
     public void testSumaConCadenaVacia(){
-        String cadena ="";
-        int resultado = OperacionesTDD.suma(cadena);
+        int resultado = OperacionesTDD.suma("");
         assertEquals(0,resultado);
     }
     @Test
     public void testSumaConNumero1Devuelve1(){
-        String cadema ="1";
-        int resultado = OperacionesTDD.suma(cadema);
+        int resultado = OperacionesTDD.suma("1");
         assertEquals(1,resultado);
     }
+    @Test
+    public void testSSuma2Numeros(){
+        assertEquals(3, OperacionesTDD.suma("1,2"));
+    }
+    @Test
+    public void testSuma3Numeroshazl(){
+        assertEquals(4,OperacionesTDD.suma("1,1,2"));
+    }
+
 }
