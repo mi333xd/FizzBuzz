@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.testng.AssertJUnit.assertEquals;
+
 public class OperacionesTDDTest {
     @Test
     public void testSumaConCadenaVacia(){
@@ -23,6 +25,11 @@ public class OperacionesTDDTest {
     @Test
     public void testSumaSeparadorSinNumero() {
         int resultado = OperacionesTDD.suma("1,2,");
+        assertEquals(-1, resultado);
+    }
+    @Test
+    public void testSumaConUnNumeroNegativo() {
+        int resultado = OperacionesTDD.suma("1,2,-2");
         assertEquals(-1, resultado);
     }
 }
