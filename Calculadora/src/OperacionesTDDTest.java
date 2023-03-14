@@ -32,4 +32,9 @@ public class OperacionesTDDTest {
         int resultado = OperacionesTDD.suma("1,2,-2");
         assertEquals(-1, resultado);
     }
+    @Test
+    public void testNumerosMayoresDe1000Ignorados() {
+        int resultado = OperacionesTDD.suma("5,1002");
+        assertEquals(5, resultado);
+    }
 }

@@ -1,13 +1,13 @@
 public class OperacionesTDD {
-    public static int suma(String cadena){
-        if (cadena.isEmpty()){
+    public static int suma(String cadena) {
+        if (cadena.isEmpty()) {
             return 0;
         } else {
             String[] numeros = cadena.split(",");
             int resultado = 0;
             StringBuilder numerosNegativos = new StringBuilder();
-            for (String numero : numeros){
-                if ((numero.equals(""))){
+            for (String numero : numeros) {
+                if ((numero.equals(""))) {
                     return -1;
                 }
                 if (cadena.endsWith(",")) {
@@ -16,12 +16,16 @@ public class OperacionesTDD {
                 int valorNumero = Integer.parseInt(numero);
                 if (valorNumero < 0) {
                     numerosNegativos.append(numero).append(",");
+                } else if (valorNumero > 1000) {
+                    System.err.println("Número superior a 1000 ignorado: " + valorNumero);
+                } else {
+                    resultado += valorNumero;
                 }
-                resultado += valorNumero;
-            }
-            if (numerosNegativos.length() > 0) {
-                String mensajeError = "Número negativo no permitido: " + numerosNegativos.toString().substring(0, numerosNegativos.length()-1);
-                return -1;
+                if (numerosNegativos.length() > 0) {
+                    String mensajeError = "Número negativo no permitido: " + numerosNegativos.toString().substring(0, numerosNegativos.length() - 1);
+                    return -1;
+                }
+
             }
             return resultado;
         }
